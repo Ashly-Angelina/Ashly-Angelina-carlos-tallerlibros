@@ -628,6 +628,7 @@ msj += "12. resumen ordenado por paginas menores a 100\n"
 msj += "13. resumen ordenado por mas caro de mayor a menor\n"
 msj += "13. resumen ordenado por paginas de mayor a menor\n"
 msj += "ingrese el código de la acción que quiere realizar siendo entre 1 y "
+msj += "14. ad interaciones diferentes de busqueda"
 let codigo = parseInt(prompt(msj));
 switch (codigo) {
     case 1:
@@ -682,3 +683,136 @@ switch (codigo) {
     default:
         console.log(" el código que ingresó no es válido")
 }
+
+//Busqueda de un objeto del array por titulo 
+let tituloBusqueda = prompt ("Ingrese el titulo del libro que desea buscar:");
+let libroTitulo = Libro.find (libro =>
+    libro.titulo === tituloBusqueda);
+    
+    if (libroTitulo){ 
+        console.log("Libro encontrado:");
+        console.log(libroTitulo);
+    } else {
+        console.log("No se encontro ningun libro con ese titulo");
+    }
+
+//Busqueda de un objeto del array por autor 
+let autorBusqueda = prompt("Ingrese el autor del libro que desea buscar:");
+let libroAutor = Libro.find (libro =>
+    libro.autor === autorBusqueda);
+
+    if (libroAutor) {
+        console.log("Libro encontrado:");
+        console.log(libroAutor);
+    } else {
+        console.log ("No se encontro ningun libro de ese autor");
+    }
+
+//Busqueda de un objeto del array por fecha de publicacion
+let fechaBusqueda = prompt ("Ingrese la fecha de publicacion del libro que desea buscar:");
+let libroFecha = Libro.find (libro =>
+    libro.fecha_publicacion === fechaBusqueda);
+
+    if (libroFecha) {
+        console.log ("Libro encontrado:");
+        console.log (libroFecha);
+    } else {
+        console.log ("No se encontro ningun libro con esa fecha de publicacion");
+    }
+
+//Busqueda de un objeto del array por genero 
+let generoBusqueda = prompt ("Ingrese el genero del libro que desea buscar:");
+let librosGenero = Libro.find (libro =>
+    libro.genero === generoBusqueda )
+
+    if (generoBusqueda) {
+        console.log("Libro encontrado:");
+        console.log(librosGenero);
+    } else {
+        console.log ("No se encontro ningun libro con ese genero");
+    }
+    
+    // Búsqueda de un objeto del array por idioma
+    let idiomaBusqueda = prompt("Ingrese el idioma del libro que desea buscar:");
+    let librosIdioma = Libro.find (libro =>
+        libro.idioma === idiomaBusqueda )
+        if (idiomaBusqueda) {
+            console.log ("Libro encontrado:");
+            console.log (librosIdioma);
+        } else {
+            console.log ("No se encontro ningun libro con ese idioma");
+        }
+
+  // 10 interaciones 
+  function buscarLibro() {
+    console.log("¡Bienvenido a la búsqueda de libros!");
+
+    // Mostrar opciones de búsqueda
+    console.log("Por favor, elige una opción de búsqueda:");
+    console.log("1. Por número de páginas");
+    console.log("2. Por precio");
+    console.log("3. Por popularidad");
+    console.log("4. Por fecha de adición al catálogo");
+    console.log("5. Por autor(es) relacionado(s)");
+    console.log("6. Por serie a la que pertenece el libro");
+    console.log("7. Por categoría de edad recomendada");
+    console.log("8. Por disponibilidad en línea o en tiendas físicas");
+    console.log("9. Por edición");
+    console.log("10. Por estado de conservación");
+
+    // Leer la opción del usuario
+    let opcion = prompt("Ingrese el número de la opción que desea buscar:");
+
+    // Realizar la búsqueda basada en la opción seleccionada
+    switch (opcion) {
+        case "1":
+            console.log("Buscando por número de páginas...");
+            // Lógica para buscar por número de páginas
+            break;
+        case "2":
+            console.log("Buscando por precio...");
+            // Lógica para buscar por precio
+            break;
+        case "3":
+            console.log("Buscando por popularidad...");
+            // Lógica para buscar por popularidad
+            break;
+        case "4":
+            console.log("Buscando por fecha de adición al catálogo...");
+            // Lógica para buscar por fecha de adición al catálogo
+            break;
+        case "5":
+            console.log("Buscando por autor(es) relacionado(s)...");
+            // Lógica para buscar por autor(es) relacionado(s)
+            break;
+        case "6":
+            console.log("Buscando por serie a la que pertenece el libro...");
+            // Lógica para buscar por serie a la que pertenece el libro
+            break;
+        case "7":
+            console.log("Buscando por categoría de edad recomendada...");
+            // Lógica para buscar por categoría de edad recomendada
+            break;
+        case "8":
+            console.log("Buscando por disponibilidad en línea o en tiendas físicas...");
+            // Lógica para buscar por disponibilidad en línea o en tiendas físicas
+            break;
+        case "9":
+            console.log("Buscando por edición...");
+            // Lógica para buscar por edición
+            break;
+        case "10":
+            console.log("Buscando por estado de conservación...");
+            // Lógica para buscar por estado de conservación
+            break;
+        default:
+            console.log("Opción no válida. Por favor, seleccione una opción válida.");
+            break;
+    }
+}
+
+
+    
+  
+    
+
